@@ -70,7 +70,7 @@
 				userName = "JordanDev-Foss";
 				userEmail = "jordandixon@jrips.org";
 				extraConfig = {
-					init.defaultBranch = "main";
+					init.defaultBranch = "master";
 					safe.directory = "/etc/nixos";
 				};
 
