@@ -30,6 +30,7 @@
 			riseup-vpn
 			rustdesk
 			signal-desktop
+			tealdeer
 			thunderbird
 			tree
 			vesktop
