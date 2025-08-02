@@ -71,7 +71,6 @@
 				userEmail = "jordandixon@jrips.org";
 				extraConfig = {
 					init.defaultBranch = "master";
-					safe.directory = "/etc/nixos";
 				};
 
 			};
