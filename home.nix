@@ -55,7 +55,7 @@
 				gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
 				ls = "eza --icons";
 				cat = "bat";
-				update = "sudo nix flake update; sudo nixos-rebuild switch";
+				update = "sudo nixos-rebuild switch --flake /home/dixonj/nix-flake/ --impure";
 			};
 
 			oh-my-zsh = {
