@@ -31,6 +31,7 @@
 			rustdesk
 			signal-desktop
 			tealdeer
+			tor-browser-bundle-bin
 			thunderbird
 			tree
 			vesktop
