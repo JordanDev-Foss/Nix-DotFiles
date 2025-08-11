@@ -37,6 +37,7 @@
 			tree
 			vesktop
 			vlc
+			vscodium
 			wl-clipboard
 			zsh
 		];
