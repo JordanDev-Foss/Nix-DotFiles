@@ -11,6 +11,7 @@
 			eza
 			fastfetch
 			flatpak
+			flutter
 			gimp
 			inkscape
 			kdePackages.kdeconnect-kde
