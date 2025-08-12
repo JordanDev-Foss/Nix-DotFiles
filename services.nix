@@ -8,9 +8,9 @@
             flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         '';
     };
-    systemd.extraConfig = ''
-        DefaultTimeoutStopSec=10s
-    '';
+    systemd.settings.Manager = {
+        DefaultTimeoutStopSec = "10s";
+    };
     services = {
         journald.extraConfig = "SystemMaxUse=100M";
         xserver.enable = false;
