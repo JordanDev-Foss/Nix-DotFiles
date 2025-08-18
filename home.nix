@@ -20,7 +20,6 @@
 			kitty
 			librewolf
 			lutris
-			nix-output-monitor
 			nil
 			neo
 			nvd
