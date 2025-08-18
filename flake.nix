@@ -3,7 +3,7 @@
 
   inputs = {
     #nixpkgs.url = "github:nixos/nixpkgs/932868d5726c38c5015aa281e0759593663ab39c"; # Pin to a specific commit
-    nixpkgs.url = "github:nixos/nixpkgs"; # Pin to a specific commit
+    nixpkgs.url = "github:nixos/nixpkgs";
     home-manager = {
     	url = "github:nix-community/home-manager/master";
       	inputs.nixpkgs.follows = "nixpkgs";
