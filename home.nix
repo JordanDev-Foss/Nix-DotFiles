@@ -60,7 +60,8 @@
 				gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
 				ls = "eza --icons";
 				cat = "bat";
-				update = "sudo nixos-rebuild build --flake /home/dixonj/nix-flake/ --impure && nvd diff /run/current-system result";
+				#update = "sudo nixos-rebuild build --flake /home/dixonj/nix-flake/ --impure && nvd diff /run/current-system result";
+				update = "sudo nixos-rebuild build --flake /home/dixonj/nix-flake/ --impure && nvd diff /run/current-system result && sudo nixos-rebuild switch --flake /home/dixonj/nix-flake/ --impure";
 				#update = "sudo nixos-rebuild build --flake /home/dixonj/nix-flake/ --impure "$@" && nvd diff /run/current-system result";
 			};
 
