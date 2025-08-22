@@ -8,6 +8,7 @@
 		enableNixpkgsReleaseCheck = false;
 		packages = with pkgs; [
 			bat
+			docker
 			eza
 			fastfetch
 			flatpak
