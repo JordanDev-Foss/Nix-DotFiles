@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+    virtualisation.docker.enable = true;
     programs = {
     	adb.enable = true;
         zsh.enable = true;
