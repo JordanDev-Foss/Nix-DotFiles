@@ -22,7 +22,6 @@
 			lutris
 			nil
 			neo
-			nvd
 			obs-studio
 			oh-my-zsh
 			onlyoffice-bin
