@@ -10,8 +10,12 @@
         git
         gnupg
         kdePackages.full
-        kdePackages.sddm-kcm
-        neovim
+	kdePackages.qtmultimedia
+	kdePackages.qtsvg
+        kdePackages.qtvirtualkeyboard
+	neovim
+	sddm-sugar-dark
+	sddm-astronaut
         wimlib
         wget
     ];

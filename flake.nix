@@ -8,14 +8,10 @@
     	url = "github:nix-community/home-manager/master";
       	inputs.nixpkgs.follows = "nixpkgs";
     };
-    winapps = {
-    	url = "github:winapps-org/winapps";
-	inputs.nixpkgs.follows = "nixpkgs";
-    };
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, winapps, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
     nixosConfigurations.NixOS = nixpkgs.lib.nixosSystem rec {
     system = "x86_64-linux";
     specialArgs = {
@@ -29,20 +25,6 @@
         ./programs.nix
         ./services.nix
         ./users.nix
-	(
-            {
-              pkgs,
-              system ? pkgs.system,
-              ...
-            }:
-            {
-              environment.systemPackages = [
-                winapps.packages."${system}".winapps
-                winapps.packages."${system}".winapps-launcher # optional
-              ];
-            }
-          )
-
 	home-manager.nixosModules.home-manager
 	{
 		home-manager.useGlobalPkgs = true;
