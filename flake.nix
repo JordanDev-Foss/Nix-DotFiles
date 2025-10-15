@@ -2,8 +2,8 @@
   description = "A very basic flake";
 
   inputs = {
-    #nixpkgs.url = "github:nixos/nixpkgs/932868d5726c38c5015aa281e0759593663ab39c"; # Pin to a specific commit
-    nixpkgs.url = "github:nixos/nixpkgs";
+    #nixpkgs.url = "github:nixos/nixpkgs/0bcf98ab2f6f8dd664d7ea19b09bef80f1e1d044"; # Pin to a specific commit
+    nixpkgs.url = "github:nixos/nixpkgs/master";
     home-manager = {
     	url = "github:nix-community/home-manager/master";
       	inputs.nixpkgs.follows = "nixpkgs";

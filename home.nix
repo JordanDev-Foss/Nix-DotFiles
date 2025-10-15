@@ -2,9 +2,9 @@
 
 {
 	home = {
-      		username = "dixonj";
-      		homeDirectory = "/home/dixonj";
-      		stateVersion = "25.11";
+			username = "dixonj";
+			homeDirectory = "/home/dixonj";
+			stateVersion = "25.11";
 		enableNixpkgsReleaseCheck = false;
 		packages = with pkgs; [
 			bat
@@ -25,6 +25,7 @@
 			obs-studio
 			oh-my-zsh
 			onlyoffice-bin
+			prismlauncher
 			protonup-qt
 			qbittorrent
 			qtcreator
@@ -43,10 +44,10 @@
 		];
 	};
 
-      	programs = {
+		programs = {
 
-      		zsh = {
-        		enable = true;
+			zsh = {
+				enable = true;
 			autocd = true;
 			enableCompletion = true;
 			autosuggestion.enable = true;
@@ -59,9 +60,7 @@
 				gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
 				ls = "eza --icons";
 				cat = "bat";
-				#update = "sudo nixos-rebuild build --flake /home/dixonj/nix-flake/ --impure && nvd diff /run/current-system result";
 				update = "sudo nixos-rebuild switch --flake /home/dixonj/nix-flake/ --impure";
-				#update = "sudo nixos-rebuild build --flake /home/dixonj/nix-flake/ --impure "$@" && nvd diff /run/current-system result";
 			};
 
 			oh-my-zsh = {
