@@ -7,6 +7,7 @@
 			stateVersion = "25.11";
 		enableNixpkgsReleaseCheck = false;
 		packages = with pkgs; [
+			arti
 			bat
 			eza
 			fastfetch
