@@ -2,11 +2,10 @@
   description = "A very basic flake";
 
   inputs = {
-    #nixpkgs.url = "github:nixos/nixpkgs/0bcf98ab2f6f8dd664d7ea19b09bef80f1e1d044"; # Pin to a specific commit
     nixpkgs.url = "github:nixos/nixpkgs/master";
     home-manager = {
     	url = "github:nix-community/home-manager/master";
-      	inputs.nixpkgs.follows = "nixpkgs";
+        inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
@@ -25,7 +24,7 @@
         ./programs.nix
         ./services.nix
         ./users.nix
-	home-manager.nixosModules.home-manager
+	inputs.home-manager.nixosModules.home-manager
 	{
 		home-manager.useGlobalPkgs = true;
 		home-manager.useUserPackages = true;

@@ -13,30 +13,39 @@
 		DefaultTimeoutStopSec = "10s";
 	};
 
-
 	services = {
-		gnome.gnome-keyring.enable = true;
+		_3proxy = {
+			enable = true;
+			services = [
+			{
+				type = "socks";
+				auth = [ "strong" ];
+				acl = [ {
+				rule = "allow";
+				users = [ "dixonj" ];
+          }
+        ];
+      }
+    ];
+    usersFile = "/etc/3proxy.passwd";
+  };
 
+  environment.etc = {
+    "3proxy.passwd".text = ''
+      dixonj:CR:$1$wCN/CGiq$h2UJxhOmc/Tsq2RqmmwaT1
+    '';
+  };
 		journald.extraConfig = "SystemMaxUse=100M";
 		xserver.enable = false;
 		xserver.videoDrivers = ["amdgpu"];
 
-		#displayManager.sddm = {
-		#	enable = true;
-		#	wayland.enable = true; # Ensure Wayland support is enabled
-		#	theme = "sddm-astronaut-theme"; # This should match the theme name
-		#	settings = {
-		#		Theme = {
-		#			Current = "sddm-astronaut-theme"; # Set the current theme
-		#		};
-		#	};
-		#};
-		greetd = {
+		displayManager.sddm = {
 			enable = true;
+			wayland.enable = true; # Ensure Wayland support is enabled
+			theme = "sddm-astronaut-theme"; # This should match the theme name
 			settings = {
-				default_session = {
-					command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
-					user = "greeter";
+				Theme = {
+					Current = "sddm-astronaut-theme"; # Set the current theme
 				};
 			};
 		};

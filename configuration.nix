@@ -16,7 +16,7 @@
 			./packages.nix
 		];
 
-
+	
 	# Automatic Updating
 	system = {
 		autoUpgrade.enable = true;
