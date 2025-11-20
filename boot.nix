@@ -1,11 +1,15 @@
 { pkgs, ... }:
 {
 	boot = {
+		lanzaboote = {
+			enable = true;
+			pkiBundle = "/var/lib/sbctl";
+		};
 		bootspec.enable = true;
 		kernelPackages = pkgs.linuxPackages_xanmod;
 		loader = {
 			systemd-boot.editor = false;
-			systemd-boot.enable = true;
+			systemd-boot.enable = false;
 			efi.canTouchEfiVariables = true;
 		};
 		kernelParams = [

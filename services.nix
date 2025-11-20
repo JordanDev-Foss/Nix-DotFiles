@@ -15,7 +15,6 @@
 
 
 	services = {
-		gnome.gnome-keyring.enable = true;
 
 		journald.extraConfig = "SystemMaxUse=100M";
 		xserver.enable = false;
@@ -35,7 +34,7 @@
 			enable = true;
 			settings = {
 				default_session = {
-					command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
+					command = "${pkgs.tuigreet}/bin/tuigreet --time --asterisks --greeting \"== Anomalous Research and Containment Unit (ARCU) Secure Access Portal ==\nThis computer system is for authorized use only. Unauthorized access or use of this system is strictly prohibited and will be addressed to the fullest extent of applicable laws. All activities may be monitored and recorded. By continuing, you acknowledge and consent to these terms.\" --cmd startplasma-wayland";
 					user = "greeter";
 				};
 			};

@@ -24,7 +24,7 @@
 			neo
 			obs-studio
 			oh-my-zsh
-			onlyoffice-bin
+			onlyoffice-desktopeditors
 			prismlauncher
 			protonup-qt
 			qbittorrent
@@ -34,7 +34,6 @@
 			signal-desktop
 			tealdeer
 			tuigreet
-			tor-browser-bundle-bin
 			thunderbird
 			tree
 			vesktop
@@ -57,7 +56,8 @@
 				dotDir = "${config.xdg.configHome}/zsh";
 
 				initContent = ''
-				fastfetch
+				cat ~/nix-flake/ascii.txt
+				fastfetch -c examples/2.jsonc
 				'';
 				shellAliases = {
 					gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
@@ -75,10 +75,12 @@
 			
 			git = {
 				enable = true;
-				userName = "JordanDev-Foss";
-				userEmail = "jordandixon@jrips.org";
-				extraConfig = {
-					init.defaultBranch = "master";
+				settings = {
+					user.name = "JordanDev-Foss";
+					user.email = "jordandixon@jrips.org";
+					extraConfig = {
+						init.defaultBranch = "master";
+					};
 				};
 
 			};
