@@ -2,15 +2,19 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/master";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     home-manager = {
     	url = "github:nix-community/home-manager/master";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+    lanzaboote = {
+	url = "github:nix-community/lanzaboote/master";
+	inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, lanzaboote, ... }: {
     nixosConfigurations.NixOS = nixpkgs.lib.nixosSystem rec {
     system = "x86_64-linux";
     specialArgs = {
@@ -31,6 +35,7 @@
 
 		home-manager.users.dixonj = import ./home.nix;
 	}
+	inputs.lanzaboote.nixosModules.lanzaboote
 
       	];
       };
