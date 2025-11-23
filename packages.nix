@@ -10,10 +10,14 @@
 	environment.systemPackages = with pkgs; [
 		cmake
 		git
+		gnome-boxes
 		gnupg
+		libvirt
 		neovim
+		virt-viewer
 		wimlib
 		wget
+		qemu
 	];
 	hardware.graphics.extraPackages = with pkgs; [ 
 		rocmPackages.clr.icd
@@ -24,4 +28,5 @@
 		konsole
 		elisa
 	];
+	virtualisation.libvirtd.enable = true;
 }

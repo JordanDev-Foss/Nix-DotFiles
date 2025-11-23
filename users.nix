@@ -5,7 +5,7 @@
 	users.users.dixonj = {
 		isNormalUser = lib.mkForce true;
 		isSystemUser = lib.mkForce false;
-		extraGroups = [ "wheel" "ollama" "adbusers" "docker" ];
+		extraGroups = [ "wheel" "ollama" "adbusers" "docker" "libvirt" "kvm" ];
 		shell = pkgs.zsh;
 	};
 }

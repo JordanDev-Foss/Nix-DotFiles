@@ -21,6 +21,7 @@
 			librewolf
 			lutris
 			nil
+			nix-search
 			neo
 			obs-studio
 			oh-my-zsh
@@ -61,9 +62,9 @@
 				'';
 				shellAliases = {
 					gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
-					ls = "eza --icons";
+					ls = "eza --icons -hal";
 					cat = "bat";
-					update = "sudo nixos-rebuild switch --flake /home/dixonj/nix-flake/ --impure";
+					update = "nix flake update --flake $HOME/nix-flake; sudo nixos-rebuild switch --flake $HOME/nix-flake --impure";
 				};
 
 				oh-my-zsh = {
