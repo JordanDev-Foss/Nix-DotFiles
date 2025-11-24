@@ -45,7 +45,7 @@
 		flatpak.enable = true; # Enable Flatpak support
 		pulseaudio.enable = false; # Disable PulseAudio
 		printing.enable = true; # Enable printing support
-		libinput.enable = false; # Disable libinput
+		libinput.enable = true; # Enable libinput
 		pipewire = {
 			enable = true; # Enable PipeWire
 			pulse.enable = true; # Enable PulseAudio support in PipeWire
