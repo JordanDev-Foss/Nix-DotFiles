@@ -8,7 +8,10 @@
 		enableNixpkgsReleaseCheck = false;
 		packages = with pkgs; [
 			bat
+			bottom
 			eza
+			dysk
+			fd
 			fastfetch
 			flatpak
 			flutter
@@ -28,9 +31,10 @@
 			onlyoffice-desktopeditors
 			prismlauncher
 			protonup-qt
+			procs
 			qbittorrent
 			qtcreator
-			riseup-vpn
+			ripgrep
 			rustdesk
 			signal-desktop
 			tealdeer
@@ -41,6 +45,7 @@
 			vlc
 			vscodium
 			wl-clipboard
+			xh
 			zsh
 			];
 		};
@@ -65,6 +70,11 @@
 					ls = "eza --icons -hal";
 					cat = "bat";
 					update = "nix flake update --flake $HOME/nix-flake; sudo nixos-rebuild switch --flake $HOME/nix-flake --impure";
+					find = "fd";
+					grep = "rg";
+					top = "btm";
+					curl = "xh";
+					df = "dysk -a";
 				};
 
 				oh-my-zsh = {
