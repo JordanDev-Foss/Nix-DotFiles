@@ -52,7 +52,7 @@
 		};
 		ollama = {
 			enable = true;
-			#acceleration = "rocm"; # Set acceleration method
+			acceleration = "rocm"; # Set acceleration method
 		};
 		syncthing = {
 			enable = true;

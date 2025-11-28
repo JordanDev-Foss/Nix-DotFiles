@@ -2,6 +2,12 @@
 {
 	virtualisation.docker.enable = true;
 	programs = {
+		obs-studio = {
+			enable = true;
+			plugins = with pkgs.obs-studio-plugins; [
+				obs-backgroundremoval
+				];
+			};
 		adb.enable = true;
 		zsh.enable = true;
 		steam = {

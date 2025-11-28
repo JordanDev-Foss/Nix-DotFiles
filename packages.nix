@@ -9,6 +9,7 @@
 
 	environment.systemPackages = with pkgs; [
 		cmake
+		ffmpeg-full
 		git
 		gnome-boxes
 		gnupg
@@ -18,11 +19,18 @@
 		wimlib
 		wget
 		qemu
+		mesa
+		mesa-gl-headers
+		libva
+		libva-utils
 	];
+	hardware.graphics.enable = true;
+	hardware.enableAllFirmware = true;
 	hardware.graphics.extraPackages = with pkgs; [ 
 		rocmPackages.clr.icd
 		rocmPackages.tensile
 	];
+
 	environment.plasma6.excludePackages = with pkgs.kdePackages; [
 		plasma-browser-integration
 		konsole

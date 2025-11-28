@@ -21,16 +21,16 @@
 			kdePackages.kleopatra
 			keepassxc
 			kitty
-			librewolf
+			librewolf-bin
 			lutris
 			nil
 			nix-search
 			neo
-			obs-studio
 			oh-my-zsh
 			onlyoffice-desktopeditors
 			prismlauncher
 			protonup-qt
+			protonup-ng
 			procs
 			qbittorrent
 			qtcreator
@@ -69,12 +69,15 @@
 					gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
 					ls = "eza --icons -hal";
 					cat = "bat";
-					update = "nix flake update --flake $HOME/nix-flake; sudo nixos-rebuild switch --flake $HOME/nix-flake --impure";
+					update = "$HOME/nix-flake/update.sh";
 					find = "fd";
 					grep = "rg";
 					top = "btm";
 					curl = "xh";
 					df = "dysk -a";
+					fastfetch = "cat $HOME/nix-flake/ascii.txt; fastfetch -c examples/2.jsonc";
+					neofetch = "cat $HOME/nix-flake/ascii.txt; fastfetch -c examples/2.jsonc";
+
 				};
 
 				oh-my-zsh = {
